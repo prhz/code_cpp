@@ -1,10 +1,10 @@
 #include <stdio.h>
-
+int Distance[100005];
+int SumArray[100005];
 int main()
 {
 	int N;
-	int Distance[10005];
-	int SumArray[10005];
+
 	int sum = 0;
 	scanf("%d", &N);
 	for(int i = 1; i <= N; i++)

@@ -1,31 +1,31 @@
-#include <stdio.h>
-#include <math.h>
+#include<stdio.h>
+#include<math.h>
+
 int main()
 {
     int N;
     char c;
-
-    scanf("%d %c", &N, &c);
-    int M = round(N/2.0);
-    printf("%d\n", M);
-    for(int i = 0; i< M;i++)
+    scanf("%d %c",&N,&c);
+    int hang = round(N/2.0);
+    for(int i =0;i<N;i++)
     {
-        if(i == 0|| i == M-1){
-            for(int j = 0; j< N;j++)
-            {
-                printf("%c", c);
-            }
-            printf("\n");
-        }else{
-            printf("%c", c);
-            for(int j = 1; j <N-1;j++)
-            {
-                printf(" ");
-            }
-            printf("%c\n", c);
+        printf("%c",c);
+    }
+    printf("\n");
+    for(int i = 0; i<hang-2;i++)
+    {
+        printf("%c",c);
+        for(int i = 0; i < N-2;i++)
+        {
+            printf(" ");
         }
-
+        printf("%c\n",c);
     }
 
+    for(int i =0;i<N;i++)
+    {
+        printf("%c",c);
+    }
+    printf("\n");
     return 0;
 }

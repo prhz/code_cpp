@@ -2,48 +2,6 @@
 
 int main()
 {
-    int A[2010];
-    int index = 0;
-    int temp;
-    while(scanf("%d", &temp)!=EOF)
-    {
-        A[index] = temp;
-        index++;
-    }
-    int count =0;
-    for(int i = 0; i < index / 2; i++)
-    {
-        A[i*2] = A[i*2]*A[i*2+1];
-        if(A[i*2+1] > 0){
-            A[i*2+1] --;
-        }
-        if(A[i*2] != 0){
-            count++;
-        }
-
-    }
-    if(count == 0){
-        printf("0 0\n");
-    }else{
-        for(int i = 0; i < index/2; i++)
-        {
-            if(A[2*i]!=0){
-                printf("%d %d", A[2*i], A[2*i+1]);
-            }
-            if(i < index/2 - 1){
-                printf(" ");
-            }else{
-                printf("\n");
-            }
-        }
-    }
-}
-
-
-#include <stdio.h>
-
-int main()
-{
         int P[1005] = {0};
 
         int x,e;
@@ -71,10 +29,12 @@ int main()
                 if(P[i] != 0){
                     printf("%d %d", P[i], i);
                     count --;
+                   
                 }
-                if(count != 0){
-                    printf(" ");
-                }
+                 if(count != 0){
+                        printf(" ");
+                    }
+                
 
             }
 

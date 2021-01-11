@@ -4,7 +4,8 @@
 int main()
 {
     int N;
-    scanf("%d", &N);
+    char c;
+    scanf("%d %c", &N,&c);
     int x = (int)sqrt((N+1)*2.0) -1;
     if(x % 2 ==0){ // 偶数时 减一
         x--;
@@ -17,12 +18,9 @@ int main()
         }
         for(int k = 0; k < i; k++)
         {
-            printf("*");
+            printf("%c",c);
         }
-        for(int j = 0; j < (x-i)/2;j++)
-        {
-            printf(" ");
-        }
+        
         printf("\n");
     }
     for(int i = 3; i <= x; i+=2)
@@ -33,12 +31,9 @@ int main()
         }
         for(int k = 0; k < i; k++)
         {
-            printf("*");
+            printf("%c",c);
         }
-        for(int j = 0; j < (x-i)/2;j++)
-        {
-            printf(" ");
-        }
+        
         printf("\n");
     }
     int use = ((1+x)*(x+1))/2-1;
@@ -47,3 +42,4 @@ int main()
 
     return 0;
 }
+// 输出完*后，其他空格不用输出
